@@ -29,7 +29,7 @@ export function fetchBreeds() {
 }
 
 export function fetchCatByBreed(breedId) {
-    fetch(`${BASE_URL}/images/search?breed_ids=${breedId}`)
+   fetch(`${BASE_URL}/images/search?breed_ids=${breedId}`)
         .then(response => {
             if (!response.ok) {
                 throw new Error(response.statusText)
@@ -40,10 +40,10 @@ export function fetchCatByBreed(breedId) {
             if (data.length > 0) {
                 const catData = data[0];
                 const catImage = `<img srs="${catData.url}" alt="Cat image"></img>`;
-                const catInfo = `<h2>${catData.name}</h2>
-<p>Description: ${catData.breeds[0].description}</p>
-          <p>Temperament: ${catData.breeds[0].temperament}</p>`
-                
+                const catInfo = `<h2>${catData.breeds[0].name}</h2>
+          <p>Description: ${catData.breeds[0].description}</p>
+          <p>Temperament: ${catData.breeds[0].temperament}</p>
+        `;
                 refs.infoCat.innerHTML = catImage + catInfo;
             }
             
