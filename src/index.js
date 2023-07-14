@@ -44,10 +44,12 @@ function onSelect(event) {
                
             let catInfo = data[0];
             console.log(catInfo);
-            const catCard = `<img src="${catInfo.url}" alt="Cat image" width = 500></img>
-            <h2>${catInfo.breeds[0].name}</h2>
-            <p>Description: ${catInfo.breeds[0].description}</p>
-            <p>Temperament: ${catInfo.breeds[0].temperament}</p>`
+            const catCard = `<img src="${catInfo.url}" alt="Cat image" class = "cat-image"></img>
+            <div class ="container">
+            <h2 class="cat-tittle">${catInfo.breeds[0].name}</h2>
+            <p class="cat-descr">Description: ${catInfo.breeds[0].description}</p>
+            <p  class ="cat-temp">Temperament: ${catInfo.breeds[0].temperament}</p>
+            </div>`
 
             refs.infoCat.innerHTML = catCard
         }).catch(err => Notiflix.Notify.failure(`${refs.errorEl.textContent}`)).finally(() => { hideEl(refs.loaderEL); showEl(refs.infoCat); })

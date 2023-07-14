@@ -86,3 +86,22 @@
         box-shadow: .2em -.2em 0 0 currentcolor;
     }
 }
+
+.cat-info{
+    margin-top: 20px;
+    display: flex;
+  
+}
+.container{
+ max-width: 600px;
+ margin-left: 20px;
+}
+
+.cat-image{
+    width: 400px;
+}
+
+.cat-tittle{
+
+    font-size: 50px;
+}
