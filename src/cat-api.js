@@ -4,7 +4,7 @@
 
 
 
-const BASE_URL = 'https://api.thecatapi.com/v1';
+const BASE_URL = 'https://api.thecatapi.com/v';
 const API_KEY = 'live_hlBvwU7f4qPZLTDeNehIKrPTknEulvSeQPwDAYbbrTXj4DszHTLcadwiaj0rwN8g'
 
 
